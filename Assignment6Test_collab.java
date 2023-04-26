@@ -2391,6 +2391,12 @@ class Assignment6Test_collab {
 	// Matthew DeGuzman Tests
 	@Test
     void imageImageTimesDivMod() throws Exception {
+   	/** NOTE: this test will only work if you correct a typo in ImageOps.binaryPackedPixelPixelOp
+    	* the cases for DIV and MOD in the switch statement should be replaced with
+	*    case DIV -> PixelOps.pack(lred / rred, lgrn / rgrn, lblu / rblu);
+        *    case MOD -> PixelOps.pack(lred % rred, lgrn % rgrn, lblu % rblu);
+	* to avoid a divide by 0 error
+	*/
         String inputTimes = """
                 image p(string s1, string s2, int w, int h) {
                     image[w,h] i1 = s1.
